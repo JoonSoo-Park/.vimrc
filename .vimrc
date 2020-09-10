@@ -18,7 +18,6 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'rip-rip/clang_complete'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'wakatime/vim-wakatime'
 Plugin 'majutsushi/tagbar'
 Plugin 'altercation/vim-colors-solarized'
 
@@ -83,7 +82,7 @@ let g:cpp_posix_standard = 1
 let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
-let g:clang_library_path = '/usr/lib/x86_64-linux-gnu/libclang-6.0.so.1'
+let g:clang_library_path = '/usr/lib/llvm-6.0/lib/libclang-6.0.so.1'
 
 let g:airline_theme = 'atomic'
 let g:airline#extensions#tabline#enabled = 0
@@ -104,3 +103,11 @@ nmap <F8> :TagbarToggle<CR>
 nmap <F12> :NERDTree<CR>
 map <C-F11> :SyntasticReset<CR>
 map <C-F12> :NERDTreeClose<CR>
+
+"inoremap " ""<left>
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
